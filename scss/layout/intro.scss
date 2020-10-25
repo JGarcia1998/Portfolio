@@ -1,0 +1,185 @@
+.intro {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10rem;
+
+  &__border {
+    width: 24rem;
+    height: 24rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    background: linear-gradient(to left, $grey-dark, $light-blue);
+  }
+  &__photo {
+    background-image: url(../img/jared.jpeg);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: bottom;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 5rem;
+    color: $grey-dark;
+    font-weight: 300;
+    margin-top: 1rem;
+    display: inline-block;
+
+    position: relative;
+  }
+
+  &__title::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+
+    width: 5rem;
+    background-color: $light-blue;
+    height: 3px;
+  }
+
+  &__about-container {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15rem;
+    opacity: 0;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  &__column-2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__developer {
+    font-size: 3rem;
+    color: #333333;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+
+  &__personal {
+    font-size: 3rem;
+    color: #333333;
+    font-weight: 400;
+
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+
+  &__item {
+    list-style-type: none;
+  }
+
+  &__span::after {
+    content: ":";
+    position: absolute;
+    right: -10px;
+  }
+
+  &__span {
+    border-bottom: 2px solid $light-blue;
+    position: relative;
+    font-size: 2rem;
+  }
+
+  &__span-info {
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+
+  &__resume-btn::after {
+    content: "";
+    height: 100%;
+    background-color: $dark-blue;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+    z-index: -1;
+  }
+
+  &__resume-btn:hover {
+    color: #fff;
+  }
+
+  &__resume-btn {
+    display: block;
+    border: 2px solid $med-blue;
+
+    color: $med-blue;
+    border-radius: 2px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  &__resume-btn:hover::after {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  &__about-me {
+    font-size: 1.5rem;
+    color: #838181;
+    line-height: 1.7;
+  }
+}
+
+.personal {
+  font-size: 10rem;
+  color: transparent;
+  background-image: linear-gradient(to right, $med-blue, $dark-blue);
+  -webkit-background-clip: text;
+}
+
+.skill-name {
+  font-size: 2.2rem;
+  margin-top: 1rem;
+  font-weight: 400;
+  color: $grey-dark;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-gap: 5rem;
+  padding: 10rem;
+}
+
+.skill-title {
+  text-align: center;
+  font-size: 5rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: $grey-dark;
+}
