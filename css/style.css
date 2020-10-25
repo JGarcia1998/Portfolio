@@ -148,7 +148,8 @@ main {
     justify-content: space-around;
     height: 100%; }
   .sidebar__link {
-    display: block;
+    display: flex;
+    align-items: center;
     font-size: 1.8rem;
     font-weight: 300;
     text-decoration: none;

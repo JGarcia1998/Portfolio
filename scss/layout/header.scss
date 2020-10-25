@@ -173,7 +173,9 @@
   }
 
   &__link {
-    display: block;
+    display: flex;
+
+    align-items: center;
     font-size: 1.8rem;
     font-weight: 300;
     text-decoration: none;

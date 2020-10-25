@@ -3,6 +3,7 @@ document
   .addEventListener("click", function () {
     if (document.querySelector(".sidebar__input").checked) {
       document.querySelector(".sidebar").style.width = 0;
+
       document.querySelector(".sidebar__label").style.top = "5rem";
       document.querySelector(".sidebar__label").style.left = "-8rem";
       document.getElementById("main").style.filter = "none";
