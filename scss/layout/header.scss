@@ -72,6 +72,15 @@
   padding: 2rem 5rem;
   position: relative;
 
+  &__dropdown {
+    font-size: 5rem;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+  }
+
   &__title {
     font-size: 3rem;
     font-weight: 400;
@@ -123,9 +132,10 @@
     font-size: 12rem;
     letter-spacing: 4px;
     font-weight: 900;
-
+    white-space: nowrap;
     margin-bottom: 3rem;
     position: absolute;
+
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -140,6 +150,7 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     color: $med-blue;
     text-shadow: -1px -1px 0 $outline, 1px -1px 0 $outline, -1px 1px 0 $outline,
       1px 1px 0 $outline;

@@ -56,6 +56,7 @@
     color: $white;
     text-align: center;
     background-image: linear-gradient(to bottom, $dark-blue, $med-blue);
+
     padding: 1rem 1.5rem;
   }
 
@@ -163,4 +164,8 @@
   font-weight: 300;
   color: $grey-dark;
   margin-top: 8rem;
+}
+
+.section-in {
+  opacity: 0;
 }

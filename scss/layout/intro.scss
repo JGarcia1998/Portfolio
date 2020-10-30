@@ -59,10 +59,29 @@
     width: 50%;
   }
 
+  &__initials {
+    padding: 1.2rem;
+    border-radius: 25%;
+    width: 5rem;
+    height: 5rem;
+    background-color: rgb(255, 58, 32);
+    color: $white;
+    border: 5px solid rgb(211, 217, 229);
+    position: absolute;
+    top: -1.5rem;
+    left: -1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+  }
+
   &__column-2 {
+    position: relative;
     display: flex;
     flex-direction: column;
-    background-color: $white;
+    background-image: linear-gradient(to right bottom, $grey-light, $grey-dark);
     box-shadow: 0 1rem 2rem rgba(black, 0.3);
     border-radius: 8px;
     transform: scale(1.1);
@@ -85,15 +104,17 @@
 
   &__personal {
     font-size: 3rem;
-    color: #333333;
-    font-weight: 400;
+    color: $white;
+    font-weight: 300;
 
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin-bottom: 1rem;
   }
 
   &__item {
     list-style-type: none;
+    margin: 0.5rem;
+    color: $white;
   }
 
   &__span::after {
@@ -122,30 +143,18 @@
   &__span-info {
     font-size: 2rem;
     margin-left: 2rem;
-  }
-
-  &__resume-btn::after {
-    content: "";
-    height: 100%;
-    background-color: $dark-blue;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 3px;
-    transform: scaleY(0);
-    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
-    z-index: -1;
+    font-weight: 300;
   }
 
   &__resume-btn:hover {
-    color: #fff;
+    background-color: #3b64ac;
   }
 
   &__resume-btn {
     display: block;
-    border: 2px solid $med-blue;
 
-    color: $med-blue;
+    background-color: $med-blue;
+    color: $white;
     border-radius: 2px;
     padding: 0.5rem 1rem;
     text-align: center;
@@ -196,6 +205,7 @@
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   grid-gap: 5rem;
   padding: 10rem;
+  opacity: 0;
 }
 
 .skill-title {
@@ -204,4 +214,5 @@
   letter-spacing: 1px;
   font-weight: 300;
   color: $grey-dark;
+  opacity: 0;
 }

@@ -9,6 +9,10 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @media only screen and (max-width: 68.75em) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -17,6 +21,7 @@ body {
   box-sizing: border-box;
   line-height: 1.7;
   background-color: rgb(211, 217, 229);
+
   position: relative;
 }
 

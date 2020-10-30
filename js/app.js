@@ -26,38 +26,34 @@ document.querySelectorAll(".menu").forEach((item) => {
   });
 });
 
-$(window).scroll(function () {
-  /* Check the location of each desired element */
-  $(".intro").each(function (i) {
-    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-    var bottom_of_window = $(window).scrollTop() + $(window).height();
+fadeIn("intro");
 
-    /* If the object is completely visible in the window, fade it it */
-    if (bottom_of_window > bottom_of_object) {
-      $(this).animate(
-        {
-          opacity: "1",
-        },
-        1000
-      );
-    }
+fadeIn("intro__about-container");
+
+fadeIn("skill-title");
+
+fadeIn("skills");
+
+fadeIn("section-in");
+
+fadeIn("contact");
+
+function fadeIn(className) {
+  $(window).scroll(function () {
+    /* Check the location of each desired element */
+    $(`.${className}`).each(function (i) {
+      var bottom_of_object = $(this).offset().top;
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+      /* If the object is completely visible in the window, fade it it */
+      if (bottom_of_window > bottom_of_object) {
+        $(this).animate(
+          {
+            opacity: "1",
+          },
+          900
+        );
+      }
+    });
   });
-});
-
-$(window).scroll(function () {
-  /* Check the location of each desired element */
-  $(".intro__about-container").each(function (i) {
-    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-    var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-    /* If the object is completely visible in the window, fade it it */
-    if (bottom_of_window > bottom_of_object) {
-      $(this).animate(
-        {
-          opacity: "1",
-        },
-        1000
-      );
-    }
-  });
-});
+}
