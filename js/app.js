@@ -1,6 +1,6 @@
-let min = window.matchMedia("(max-width: 37.5em)");
-let med = window.matchMedia("(max-width: 43.75em)");
-let max = window.matchMedia("(max-width: 28.1em)");
+const min = window.matchMedia("(max-width: 37.5em)");
+const med = window.matchMedia("(max-width: 43.75em)");
+const max = window.matchMedia("(max-width: 28.1em)");
 
 function checkMin() {
   if (min.matches) {
