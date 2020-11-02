@@ -1,16 +1,4 @@
 .contact {
-  background-color: transparent;
-  width: 100%;
-  height: 30rem;
-  margin-top: 50rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  @media only screen and (max-width: 33.43em) {
-    z-index: -1;
-  }
-
   &__text {
     color: $white;
     margin-bottom: 3rem;
@@ -23,26 +11,21 @@
     padding: 3rem 2rem;
     width: 60rem;
     height: 40rem;
-    position: absolute;
-    top: -15rem;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     border-radius: 4px;
-    z-index: 2;
+    display: block;
+    margin: 0 auto;
+    transform: translateY(16rem);
 
-    @media only screen and (max-width: 41.5em) {
-      width: 45rem;
-      height: min-content;
-    }
-
-    @media only screen and (max-width: 35.9em) {
+    @media only screen and (max-width: 42em) {
       width: 90%;
     }
 
     @media only screen and (max-width: 33.6em) {
       padding: 5rem 2rem;
-      margin-top: 80rem;
-      margin-bottom: 5rem;
+      margin-bottom: 10rem;
+      margin-top: 30rem;
+      transform: translateY(0);
     }
   }
 
@@ -103,6 +86,7 @@
     transition: 0.2s;
     border: none;
     border-radius: 2px;
+    background-color: rgb(230, 230, 230);
 
     @media only screen and (max-width: 41.5em) {
       margin-top: 1rem;
@@ -130,11 +114,7 @@
   box-shadow: 0 1rem 1rem rgba(black, 0.2);
   padding: 2rem 3rem;
 
-  @media only screen and (max-width: 41.5em) {
-    left: -13rem;
-  }
-
-  @media only screen and (max-width: 35.9em) {
+  @media only screen and (max-width: 42em) {
     top: 50%;
     left: 1.2rem;
     width: 35%;
@@ -142,7 +122,7 @@
 
   @media only screen and (max-width: 33.6em) {
     width: 90%;
-    top: -35%;
+    top: -40%;
     left: 50%;
     transform: translateX(-50%);
     height: 20rem;
@@ -198,16 +178,11 @@
 }
 
 .svg {
-  margin-top: 40rem;
   position: relative;
   z-index: -2;
 
   display: block;
   width: 100%;
-
-  @media only screen and (max-width: 37.5em) {
-    margin-top: 60rem;
-  }
 
   @media only screen and (max-width: 34.1em) {
     display: none;

@@ -114,6 +114,7 @@
     font-weight: 400;
     letter-spacing: 1px;
     margin-bottom: 1rem;
+    text-align: center;
 
     @media only screen and (max-width: 46.8em) {
       width: 80%;
@@ -164,6 +165,7 @@
     font-size: 2rem;
     margin-left: 2rem;
     font-weight: 300;
+    color: $white;
 
     @media only screen and (max-width: 24.2em) {
       font-size: 1.7rem;
@@ -208,6 +210,10 @@
     @media only screen and (max-width: 46.8em) {
       width: 80%;
       font-size: 2rem;
+    }
+
+    @media only screen and (max-width: 34.3em) {
+      width: 100%;
     }
   }
 }

@@ -24,11 +24,9 @@ document
       document.querySelector(".sidebar__label").style.left = "-8rem";
       document.getElementById("main").style.filter = "none";
     } else {
-      if (med.matches) {
-        document.querySelector(".sidebar").style.width = "45vw";
-      } else {
-        document.querySelector(".sidebar").style.width = "25vw";
-      }
+      med.matches
+        ? (document.querySelector(".sidebar").style.width = "45vw")
+        : (document.querySelector(".sidebar").style.width = "25vw");
 
       document.querySelector(".sidebar__label").style.top = "50%";
       document.querySelector(".sidebar__label").style.left = "-2.5rem";
@@ -46,3 +44,34 @@ document.querySelectorAll(".menu").forEach((item) => {
     document.querySelector(".sidebar__input").checked = false;
   });
 });
+
+(function () {
+  scrollTo();
+})();
+
+function scrollTo() {
+  const links = document.querySelectorAll(".scroll");
+  links.forEach((each) => (each.onclick = scrollAnchors));
+}
+
+function scrollAnchors(e, respond = null) {
+  const distanceToTop = (el) => Math.floor(el.getBoundingClientRect().top);
+  e.preventDefault();
+  var targetID = respond
+    ? respond.getAttribute("href")
+    : this.getAttribute("href");
+  const targetAnchor = document.querySelector(targetID);
+  if (!targetAnchor) return;
+  const originalTop = distanceToTop(targetAnchor);
+  window.scrollBy({ top: originalTop, left: 0, behavior: "smooth" });
+  const checkIfDone = setInterval(function () {
+    const atBottom =
+      window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+    if (distanceToTop(targetAnchor) === 0 || atBottom) {
+      targetAnchor.tabIndex = "-1";
+
+      window.history.pushState("", "", targetID);
+      clearInterval(checkIfDone);
+    }
+  }, 100);
+}
