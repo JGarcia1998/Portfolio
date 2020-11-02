@@ -15,7 +15,7 @@
     background: linear-gradient(to left, $grey-dark, $light-blue);
   }
   &__photo {
-    background-image: url(../img/jared.jpeg);
+    background-image: url(../img/jared.jpg);
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -99,7 +99,7 @@
     transition: 0.2s;
 
     @media only screen and (max-width: 46.8em) {
-      margin: 3rem;
+      margin: 1rem;
     }
 
     &:hover {
@@ -114,12 +114,12 @@
     font-weight: 400;
     letter-spacing: 1px;
     margin-bottom: 1rem;
-    text-align: center;
 
     @media only screen and (max-width: 46.8em) {
-      width: 80%;
+      text-align: center;
+      width: 95%;
       font-size: 4rem;
-      margin-bottom: 2rem;
+      margin-bottom: 3.5rem;
     }
   }
 

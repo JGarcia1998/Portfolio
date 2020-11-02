@@ -322,7 +322,7 @@ main {
     padding: 0.5rem;
     background: linear-gradient(to left, #1d1d1d, #5dadec); }
   .intro__photo {
-    background-image: url(../img/jared.jpeg);
+    background-image: url(../img/jared.jpg);
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -390,7 +390,7 @@ main {
     transition: 0.2s; }
     @media only screen and (max-width: 46.8em) {
       .intro__column-2 {
-        margin: 3rem; } }
+        margin: 1rem; } }
     .intro__column-2:hover {
       transform: scale(1.15);
       box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.3); }
@@ -399,13 +399,13 @@ main {
     color: #333333;
     font-weight: 400;
     letter-spacing: 1px;
-    margin-bottom: 1rem;
-    text-align: center; }
+    margin-bottom: 1rem; }
     @media only screen and (max-width: 46.8em) {
       .intro__developer {
-        width: 80%;
+        text-align: center;
+        width: 95%;
         font-size: 4rem;
-        margin-bottom: 2rem; } }
+        margin-bottom: 3.5rem; } }
   .intro__personal {
     font-size: 3rem;
     color: #fff;
@@ -544,9 +544,9 @@ main {
     height: 20rem;
     background-size: cover;
     width: 100%; }
-    @media only screen and (max-width: 35.25em) {
+    @media only screen and (max-width: 38.5em) {
       .project__img {
-        height: 30rem; } }
+        height: auto; } }
   .project__name {
     font-size: 1.8rem;
     letter-spacing: 2px;
