@@ -1,7 +1,7 @@
 const min = window.matchMedia("(max-width: 37.5em)");
 const med = window.matchMedia("(max-width: 43.75em)");
 const max = window.matchMedia("(max-width: 28.1em)");
-
+// test pr
 function checkMin() {
   if (min.matches) {
     document.querySelector(".header__resume").innerHTML = "Resume" + "&rarr;";
