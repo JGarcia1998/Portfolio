@@ -258,7 +258,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: all 0.5s;
+  transition: all 0.8s;
 
   &__container {
     display: flex;
@@ -278,7 +278,7 @@
     color: #fff;
     padding: 1.5rem 3rem;
     position: relative;
-    transition: 0.5s;
+    transition: 0.8s;
   }
   &__link::after {
     content: "";
@@ -317,7 +317,7 @@
     transform: translateY(-50%);
     border: 3px solid white;
     cursor: pointer;
-    transition: all 0.5s;
+    transition: all 0.8s;
     outline: none;
     box-shadow: 0 1rem 1rem rgba(black, 0.2);
     z-index: 1000;
@@ -334,7 +334,7 @@
     height: 50%;
     z-index: 1;
     border-radius: 50%;
-    transition: 0.5s;
+    transition: 0.8s;
     opacity: 0;
   }
 

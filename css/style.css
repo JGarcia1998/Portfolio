@@ -6,7 +6,8 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
   @media only screen and (max-width: 65em) {
     html {
       font-size: 50%; } }
@@ -209,7 +210,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: all 0.5s; }
+  transition: all 0.8s; }
   .sidebar__container {
     display: flex;
     flex-direction: column;
@@ -226,7 +227,7 @@ main {
     color: #fff;
     padding: 1.5rem 3rem;
     position: relative;
-    transition: 0.5s; }
+    transition: 0.8s; }
   .sidebar__link::after {
     content: "";
     height: 100%;
@@ -256,7 +257,7 @@ main {
     transform: translateY(-50%);
     border: 3px solid white;
     cursor: pointer;
-    transition: all 0.5s;
+    transition: all 0.8s;
     outline: none;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
     z-index: 1000; }
@@ -271,7 +272,7 @@ main {
     height: 50%;
     z-index: 1;
     border-radius: 50%;
-    transition: 0.5s;
+    transition: 0.8s;
     opacity: 0; }
   .sidebar__label::before {
     content: "";
@@ -569,7 +570,7 @@ main {
     border-top: 1px solid #1d1d1d; }
   .project__links-special {
     display: inline-block;
-    color: #2a5298;
+    color: #11e079;
     font-size: 5rem;
     margin: 0 1rem;
     padding: 0 2rem;
@@ -582,12 +583,13 @@ main {
       .project__links-special {
         font-size: 3.8rem; } }
     .project__links-special:hover {
-      background-color: #dddddd;
+      background-color: #f0f0f0;
       transform: translateY(-3px); }
   .project__row-special {
     position: absolute;
-    top: 1rem;
-    right: 1rem; }
+    bottom: 0.8rem;
+    left: 0.8rem;
+    z-index: 500; }
   .project__special-container {
     width: 50%;
     background-image: linear-gradient(to bottom, rgba(29, 49, 134, 0.7), rgba(58, 78, 167, 0.7));
@@ -606,11 +608,11 @@ main {
         justify-content: center; } }
   .project__text-special {
     color: #fff;
-    font-size: 1.5rem;
-    letter-spacing: 3px; }
+    font-size: 1.8rem;
+    letter-spacing: 2px; }
   .project__name-special {
     font-size: 3.5rem;
-    letter-spacing: 1rem;
+    letter-spacing: 2px;
     font-weight: 400;
     color: #fff;
     align-self: flex-start; }
@@ -625,9 +627,8 @@ main {
     position: relative;
     grid-column: 1 / -1;
     display: flex;
-    background-image: url(../img/atsin-main.jpg);
+    background-image: linear-gradient(to right, rgba(2, 2, 2, 0.5), rgba(2, 2, 2, 0)), url(../img/stockwatchnew.png);
     background-size: cover;
-    background-position: center;
     object-fit: cover;
     height: 45rem;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
